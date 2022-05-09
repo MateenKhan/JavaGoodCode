@@ -29,7 +29,11 @@ export class DataLoader {
   }
 
   loadOverview(concept: Concept) {
+    this.concepts.forEach(function (item) {
+      item.active = false;
+    });
     this.currentConcept = concept;
+    this.currentConcept.active = t
     DataLoader.getOverview(concept.name).subscribe((data: Overview) => {
       console.log('overview', data);
       this.overview = data;
