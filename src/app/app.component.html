@@ -1,22 +1,19 @@
-<div
-  class="container-fluid"
-  *ngIf="subModules[0].name != ''"
->
+<div class="container-fluid">
   <div class="row">
     <div class="col-3 pe-0">
       <ul>
         <li
           class="active"
-          (click)="activateClass(subModule)"
-          *ngFor="let subModule of subModules"
-          [ngClass]="{ active: subModule.active }"
+          (click)="dataLoader.loadOverview(concept)"
+          *ngFor="let concept of dataLoader.concepts"
+          [ngClass]="{ active: concept.active }"
         >
-          {{ subModule.name }}
+          {{ concept.name }}
         </li>
       </ul>
     </div>
     <div class="col-9">
-      <app-overview [concept]="currentConcept"></app-overview>
+      <app-overview></app-overview>
     </div>
   </div>
 </div>

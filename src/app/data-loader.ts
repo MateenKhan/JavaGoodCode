@@ -9,13 +9,45 @@ import { Overview } from './models/Overview';
   providedIn: 'root',
 })
 export class DataLoader {
+  currentConcept: Concept = DataLoader.getDefaultConcept();
+  concepts: Concept[] = [DataLoader.getDefaultConcept()];
+  overview: Overview = DataLoader.getDefaultOverview();
 
-  static getConcepts():Observable<Concept[]> {
+  static getConcepts(): Observable<Concept[]> {
     const httpClient = InjectorInstance.get<HttpClient>(HttpClient);
     return httpClient.get<Concept[]>('assets/data/concepts.json');
   }
 
-  constructor() {}
+  constructor() {
+    DataLoader.getConcepts().subscribe((data: Concept[]) => {
+      console.log('concepts', data);
+      this.concepts = data;
+      let defaultConcept = data[0];
+      defaultConcept.active = true;
+      this.loadOverview(defaultConcept);
+    });
+  }
+
+  loadOverview(concept: Concept) {
+    this.concepts.forEach(function (item) {
+      item.active = false;
+    });
+    this.currentConcept = concept;
+    this.currentConcept.active = t
+    DataLoader.getOverview(concept.name).subscribe((data: Overview) => {
+      console.log('overview', data);
+      this.overview = data;
+    });
+  }
+
+  static getDefaultConcept(): Concept {
+    return { name: '', active: false };
+  }
+
+  static getDefaultOverview(): Overview {
+    return { title: '', features: [] };
+  }
+
   ngOnInit() {
     DataLoader.getOverview('java8');
   }
