@@ -1,11 +1,11 @@
-<div class="container-fluid" *ngIf="concepts[0].name != ''">
+<div class="container-fluid">
   <div class="row">
     <div class="col-3 pe-0">
       <ul>
         <li
           class="active"
-          (click)="activateClass(concept)"
-          *ngFor="let concept of concepts"
+          (click)="dataLoader.loadOverview(concept)"
+          *ngFor="let concept of dataLoader.concepts"
           [ngClass]="{ active: concept.active }"
         >
           {{ concept.name }}
@@ -13,7 +13,7 @@
       </ul>
     </div>
     <div class="col-9">
-      <app-overview [concept]="currentConcept"></app-overview>
+      <app-overview></app-overview>
     </div>
   </div>
 </div>
