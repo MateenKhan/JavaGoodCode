@@ -16,7 +16,7 @@ export class OverviewComponent implements OnInit {
 
   ngOnInit() {
     DataLoader.getOverview(this.concept.name).subscribe(
-      (data: Overview) => (this.overview = { ...data })
+      (data: Overview) => (this.overview = data)
     );
   }
 }
