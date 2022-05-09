@@ -33,7 +33,7 @@ export class DataLoader {
       item.active = false;
     });
     this.currentConcept = concept;
-    this.currentConcept.active = t
+    this.currentConcept.active = true;
     DataLoader.getOverview(concept.name).subscribe((data: Overview) => {
       console.log('overview', data);
       this.overview = data;
