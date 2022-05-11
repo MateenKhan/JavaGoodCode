@@ -3,7 +3,7 @@
   "features": [
     {
       "name": "Lamda",
-      "defination": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+      "definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
       "syntax": "(argument-list) -> {body} ",
       "examples": [
         "() -> {  System.out.println(\"Body of no parameter \")  }  ",
