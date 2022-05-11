@@ -18,4 +18,7 @@ export class OverviewComponent implements OnInit {
   toggle(): void {
     this.show = !this.show;
   }
+  public showSuccess(): void {
+    this.toastrService.success('Copied!');
+  }
 }
