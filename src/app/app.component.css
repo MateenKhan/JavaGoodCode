@@ -24,8 +24,7 @@ ul li.active {
   padding: 5px;
   background: #b6bfcb;
   font-weight: bold;
-  border-top: none;
-  border-bottom: none;
+  margin-right: -1px;
 }
 ul li:last-child.active {
   border-bottom: 1px solid;
