@@ -1,6 +1,6 @@
 export interface Feature {
   name: string;
-  defination: string;
+  definition: string;
   syntax: string;
   examples: string;
 }
