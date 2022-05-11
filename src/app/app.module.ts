@@ -24,7 +24,7 @@ export let InjectorInstance: Injector;
     ClipboardModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 15000, // 15 seconds
+      timeOut: 1500, // 15 seconds
       closeButton: true,
       progressBar: true,
     }),
