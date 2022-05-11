@@ -30,14 +30,13 @@
             <div *ngFor="let example of feature.examples" #container>
               <p class="feature-syntax">
                 {{ example }}
+                <i
+                  class="bi bi-clipboard-plus float-end"
+                  ngxClipboard
+                  [cbContent]="example"
+                  [container]="container"
+                ></i>
               </p>
-              <button
-                ngxClipboard
-                [cbContent]="'{{example}}'"
-                [container]="container"
-              >
-                Copy Content
-              </button>
             </div>
           </div>
         </div>
