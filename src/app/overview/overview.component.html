@@ -1,14 +1,38 @@
 <h1>{{ dataLoader.overview.title }}</h1>
-<ul>
+<ul class="ps-3">
   <li *ngFor="let feature of dataLoader.overview.features">
-    <a>{{ feature.name }}</a>
-    <a>{{ feature.defination }}</a>
-    <a>{{ feature.syntax }}</a>
-    <ul>
-      <li *ngFor="let examples of feature.examples">
-        <a>{{ examples }}</a>
-      </li>
-    </ul>
+    <span class="feature-name fw-bold">{{ feature.name }} : </span>
+    <span class="feature-defination">{{ feature.defination }}</span>
+    <p class="feature-syntax">
+      <span class="fw-bold">Syntax : </span> {{ feature.syntax }}
+    </p>
+    <div class="accordion" id="examples-container">
+      <div class="accordion-item">
+        <p class="fw-bold me-0 accordion-header" id="examples">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTarget"
+            aria-expanded="true"
+            aria-controls="collapseTarget"
+          >
+            Examples:
+          </button>
+        </p>
+        <div
+          id="collapseTarget"
+          class="accordion-collapse collapse show"
+          aria-labelledby="examples"
+          data-bs-parent="#examples-container"
+        >
+          <div class="accordion-body">
+            <p class="feature-syntax" *ngFor="let examples of feature.examples">
+              {{ examples }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </li>
 </ul>
-asdf

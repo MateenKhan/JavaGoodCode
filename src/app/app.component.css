@@ -36,4 +36,5 @@ ul li:first-child.active {
 .col-9 {
   border: 1px solid;
   margin-left: -0.5px;
+  width: 70%;
 }
