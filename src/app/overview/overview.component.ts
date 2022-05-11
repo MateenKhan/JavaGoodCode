@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { DataLoader } from '../data-loader';
 import { ToastrService } from 'ngx-toastr';
 

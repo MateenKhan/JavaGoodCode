@@ -2,8 +2,6 @@
   margin: 12px 0px 0px 0px;
 }
 ul {
-  padding: 0px;
-
   background: #d5dce4;
 }
 ul li {
@@ -20,20 +18,8 @@ ul li:last-child {
 }
 
 ul li.active {
-  list-style: none;
-  padding: 5px;
   background: #b6bfcb;
   font-weight: bold;
-  margin-right: -1px;
-}
-ul li:last-child.active {
-  border-bottom: 1px solid;
-  border-right: none;
-  margin-right: -1px;
-}
-ul li:first-child.active {
-  border-top: 1px solid;
-  border-right: none;
   margin-right: -1px;
 }
 .col-9 {
@@ -46,5 +32,9 @@ ul li:first-child.active {
 .col-3 {
   border-right: 1px solid;
   overflow: auto;
+  overflow-x: hidden;
 }
 
+.vh-90 {
+  height: 90vh;
+}
