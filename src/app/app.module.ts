@@ -11,6 +11,7 @@ import { Injector } from '@angular/core';
 import { DataLoader } from './data-loader';
 import { ClipboardModule } from 'ngx-clipboard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 export let InjectorInstance: Injector;
 @NgModule({
@@ -22,6 +23,11 @@ export let InjectorInstance: Injector;
     HttpClientModule,
     ClipboardModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 15000, // 15 seconds
+      closeButton: true,
+      progressBar: true,
+    }),
   ],
   providers: [DataLoader],
   bootstrap: [AppComponent],

@@ -35,7 +35,7 @@
                   ngxClipboard
                   [cbContent]="example"
                   [container]="container"
-                  (click)="toggle()"
+                  (click)="showSuccess()"
                 ></i>
               </p>
             </div>
@@ -46,10 +46,3 @@
   </li>
 </ul>
 
-<div
-  class="copy-toast"
-  *ngIf="show"
-  [@slideIn]
->
-  copied!
-</div>
