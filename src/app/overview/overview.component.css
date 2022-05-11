@@ -5,3 +5,9 @@ h1 {
 ul li {
   list-style: none;
 }
+
+.copy-toast {
+  height: 100px;
+  width: 100px;
+  border: 1px solid red;
+}

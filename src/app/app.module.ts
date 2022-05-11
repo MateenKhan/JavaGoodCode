@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Injector } from '@angular/core';
 import { DataLoader } from './data-loader';
 import { ClipboardModule } from 'ngx-clipboard';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export let InjectorInstance: Injector;
 @NgModule({
@@ -20,6 +21,7 @@ export let InjectorInstance: Injector;
     AppRoutingModule,
     HttpClientModule,
     ClipboardModule,
+    BrowserAnimationsModule,
   ],
   providers: [DataLoader],
   bootstrap: [AppComponent],
