@@ -35,6 +35,7 @@
                   ngxClipboard
                   [cbContent]="example"
                   [container]="container"
+                  (click)="toggle()"
                 ></i>
               </p>
             </div>
@@ -45,12 +46,10 @@
   </li>
 </ul>
 
-<button
-  type="button"
-  class="btn btn-lg btn-danger"
-  data-bs-toggle="popover"
-  title="Popover title"
-  data-bs-content="And here's some amazing content. It's very engaging. Right?"
+<div
+  style="height: 100px;width: 100px; border: 1px solid red"
+  *ngIf="show"
+  [@slideIn]
 >
-  Click to toggle popover
-</button>
+  IN
+</div>
