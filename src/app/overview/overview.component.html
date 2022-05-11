@@ -27,9 +27,18 @@
           data-bs-parent="#examples-container"
         >
           <div class="accordion-body">
-            <p class="feature-syntax" *ngFor="let examples of feature.examples">
-              {{ examples }}
-            </p>
+            <div *ngFor="let example of feature.examples" #container>
+              <p class="feature-syntax">
+                {{ example }}
+              </p>
+              <button
+                ngxClipboard
+                [cbContent]="'{{example}}'"
+                [container]="container"
+              >
+                Copy Content
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -9,11 +9,18 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { Injector } from '@angular/core';
 import { DataLoader } from './data-loader';
+import { ClipboardModule } from 'ngx-clipboard';
 
 export let InjectorInstance: Injector;
 @NgModule({
   declarations: [AppComponent, OverviewComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ClipboardModule,
+  ],
   providers: [DataLoader],
   bootstrap: [AppComponent],
 })
