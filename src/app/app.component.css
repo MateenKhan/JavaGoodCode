@@ -41,8 +41,10 @@ ul li:first-child.active {
   margin-left: -0.5px;
   width: 70%;
   border-left: none;
+  overflow: auto;
 }
 .col-3 {
   border-right: 1px solid;
+  overflow: auto;
 }
 
