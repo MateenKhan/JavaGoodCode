@@ -1,8 +1,8 @@
 {
-  "title": "Junit 5",
+  "title": "Junits",
   "features": [
     {
-      "name": "Parameterized test",
+      "name": "Lamda",
       "defination": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
       "syntax": "(argument-list) -> {body} ",
       "examples": [
