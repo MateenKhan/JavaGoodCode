@@ -19,8 +19,9 @@ jobs:
       if: success()
     - run: echo "******************************************************"     
     - run: git remote -v     
-    - run: ls  -R $GITHUB_WORKSPACE/ -Inode_modules -Isrc 
-    - run: rm -rf  $GITHUB_WORKSPACE/docs/*
+    - run: ls  -R $GITHUB_WORKSPACE/docs/ -Inode_modules -Isrc 
+    - run: rm -Rf  $GITHUB_WORKSPACE/docs/*
+    - run: ls  -R $GITHUB_WORKSPACE/docs/ -Inode_modules -Isrc 
     - run: cp -a $GITHUB_WORKSPACE/dist/${{ github.event.repository.name }}/. $GITHUB_WORKSPACE/docs
     - run: git status
     - run: git add $GITHUB_WORKSPACE/docs/
