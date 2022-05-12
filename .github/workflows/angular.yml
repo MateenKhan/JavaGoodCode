@@ -20,6 +20,7 @@ jobs:
     - run: echo "******************************************************"     
     - run: git remote -v     
     - run: ls  -R $GITHUB_WORKSPACE/ -Inode_modules -Isrc 
+    - run: rm -rf  $GITHUB_WORKSPACE/docs/*
     - run: cp -a $GITHUB_WORKSPACE/dist/${{ github.event.repository.name }}/. $GITHUB_WORKSPACE/docs
     - run: git status
     - run: git add $GITHUB_WORKSPACE/docs/
