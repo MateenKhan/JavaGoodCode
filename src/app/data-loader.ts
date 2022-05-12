@@ -34,14 +34,14 @@ export class DataLoader {
     });
     this.currentConcept = concept;
     this.currentConcept.active = true;
-    DataLoader.getOverview(concept.name).subscribe((data: Overview) => {
+    DataLoader.getOverview(concept.file).subscribe((data: Overview) => {
       console.log('overview', data);
       this.overview = data;
     });
   }
 
   static getDefaultConcept(): Concept {
-    return { name: '', active: false };
+    return { file:'', name: '', active: false };
   }
 
   static getDefaultOverview(): Overview {
@@ -49,11 +49,11 @@ export class DataLoader {
   }
 
   ngOnInit() {
-    DataLoader.getOverview('java8');
+    DataLoader.getOverview('java8.json');
   }
 
-  static getOverview(name: string): Observable<Overview> {
+  static getOverview(fileName: string): Observable<Overview> {
     const httpClient = InjectorInstance.get<HttpClient>(HttpClient);
-    return httpClient.get<Overview>('assets/data/overview/' + name + '.json');
+    return httpClient.get<Overview>('assets/data/overview/' + fileName );
   }
 }
