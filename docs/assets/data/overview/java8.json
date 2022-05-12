@@ -1,0 +1,14 @@
+{
+  "title": "Java 8",
+  "features": [
+    {
+      "name": "Lamda",
+      "definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+      "syntax": "(argument-list) -> {body} ",
+      "examples": [
+        "() -> {  System.out.println(\"Body of no parameter \")  }  ",
+        "(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+      ]
+    }
+  ]
+}
