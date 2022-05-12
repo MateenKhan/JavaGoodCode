@@ -22,20 +22,18 @@
 		},
 		{
 			"name": "Functional interfaces",
-			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
-			"syntax": "(argument-list) -> {body} ",
+			"definition": "An Interface that contains only one abstract method is known as functional interface. It can have any number of default and static methods. It can also declare methods of object class",
+			"syntax": "@FunctionalInterface",
 			"examples": [
-				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
-				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+				"@FunctionalInterface  interface sayable{  void say(String msg);  }"
 			]
 		},
 		{
 			"name": "Stream API",
-			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
-			"syntax": "(argument-list) -> {body} ",
+			"definition": "A package consists of classes, interfaces and an enum to allow functional-style operations on the elements. It performs lazy computation. So, it executes only when it requires",
+			"syntax": "stream.opration1().operation2().operation3()",
 			"examples": [
-				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
-				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+				"Stream.iterate(1, element->element+1).filter(element->element%5==0).limit(5).forEach(System.out::println);"
 			]
 		},
 		{
