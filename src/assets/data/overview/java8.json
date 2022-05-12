@@ -1,14 +1,150 @@
 {
-  "title": "Java 8",
-  "features": [
-    {
-      "name": "Lamda",
-      "definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
-      "syntax": "(argument-list) -> {body} ",
-      "examples": [
-        "() -> {  System.out.println(\"Body of no parameter \")  }  ",
-        "(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
-      ]
-    }
-  ]
+	"title": "Java 8",
+	"features": [
+		{
+			"name": "Lamda",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Method references",
+			"definition": "A compact and easy form of lambda expression, Each time when you are using lambda expression to just referring a method",
+			"syntax": "reference::method",
+			"examples": [
+				"/*calling static method 'isEmpty' from 'StringUtils' class*/StringUtils.isEmpty",
+				"/*calling instance method 'toString' from 'Employee' class*/new Employee()::toString",
+				"/*calling constructor of 'Employee' class*/ Employee::new"
+			]
+		},
+		{
+			"name": "Functional interfaces",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Stream API",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Default methods",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Base64 Encode Decode",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Static methods in interface",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Optional class",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Collectors class",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "ForEach() method",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Nashorn JavaScript Engine",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Parallel Array Sorting,",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Type and Repating Annotations",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "IO Enhancements",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "Concurrency Enhancements",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		},
+		{
+			"name": "JDBC Enhancements",
+			"definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+			"syntax": "(argument-list) -> {body} ",
+			"examples": [
+				"() -> {  System.out.println(\"Body of no parameter \")  }  ",
+				"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+			]
+		}
+	]
 }
