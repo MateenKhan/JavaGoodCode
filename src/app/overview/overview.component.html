@@ -1,47 +1,53 @@
-<h1>{{ dataLoader.overview.title }}</h1>
-<ul class="ps-3">
-  <li *ngFor="let feature of dataLoader.overview.features;let i=index;">
-    <span class="feature-name fw-bold">{{ feature.name }} : </span>
-    <span class="feature-definition">{{ feature.definition }}</span>
-    <p class="feature-syntax">
-      <span class="fw-bold">Syntax : </span> {{ feature.syntax }}
-    </p>
-    <div class="accordion" id="examples-container">
-      <div class="accordion-item">
-        <p class="fw-bold me-0 accordion-header" id="examples">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            [attr.data-bs-target]="'#collapseTarget-'+i"
-            aria-expanded="false"
-            [attr.aria-controls]="'collapseTarget-'+i"
-          >
-            Examples:
-          </button>
+<div class="accordion" id="accordionExample">
+  <div *ngFor="let feature of dataLoader.overview.features;let i=index;" class="accordion-item">
+    <h2 [id]="'headingOne-'+i" class="accordion-header">
+      <button [attr.aria-controls]="'collapseOne-'+i" [attr.data-bs-target]="'#collapseOne-'+i" aria-expanded="true" class="accordion-button"
+              data-bs-toggle="collapse" type="button">
+        {{ feature.name }}
+      </button>
+    </h2>
+    <div [attr.aria-labelledby]="'headingOne-'+i" [id]="'collapseOne-'+i" class="accordion-collapse collapse "
+         data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <span class="feature-definition">
+          <span class="feature-name fw-bold">Definition:</span>
+          {{ feature.definition }}
+        </span>
+        <p class="feature-syntax">
+          <span class="fw-bold">Syntax : </span> {{ feature.syntax }}
         </p>
-        <div
-          [id]="'collapseTarget-'+i"
-          class="accordion-collapse collapse hide"
-          aria-labelledby="examples"
-          data-bs-parent="#examples-container"
-        >
-          <div class="accordion-body">
-            <div *ngFor="let example of feature.examples" #container>
-              <p class="feature-syntax">
-                {{ example }}
-                <i
-                  class="bi bi-clipboard-plus float-end text-success font-weight-bold fs-5"
-                  ngxClipboard
-                  [cbContent]="example"
-                  [container]="container"
-                  (click)="showSuccess()"
-                ></i>
-              </p>
+
+
+        <div class="accordion" id="accordionExample1">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne1">
+              <button aria-controls="collapseOne1" aria-expanded="true" class="accordion-button" data-bs-target="#collapseOne1"
+                      data-bs-toggle="collapse" type="button">
+                Examples:
+              </button>
+            </h2>
+            <div aria-labelledby="headingOne1" class="accordion-collapse collapse" data-bs-parent="#accordionExample1"
+                 id="collapseOne1">
+              <div class="accordion-body">
+                <div #container *ngFor="let example of feature.examples">
+                  <p class="feature-syntax">
+                    {{ example }}
+                    <i
+                      (click)="showSuccess()"
+                      [cbContent]="example"
+                      [container]="container"
+                      class="bi bi-clipboard-plus float-end text-success font-weight-bold fs-5"
+                      ngxClipboard
+                    ></i>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
-  </li>
-</ul>
+  </div>
+</div>
