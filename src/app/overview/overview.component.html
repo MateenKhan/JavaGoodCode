@@ -1,6 +1,6 @@
 <h1>{{ dataLoader.overview.title }}</h1>
 <ul class="ps-3">
-  <li *ngFor="let feature of dataLoader.overview.features">
+  <li *ngFor="let feature of dataLoader.overview.features;let i=index;">
     <span class="feature-name fw-bold">{{ feature.name }} : </span>
     <span class="feature-definition">{{ feature.definition }}</span>
     <p class="feature-syntax">
@@ -13,16 +13,16 @@
             class="accordion-button"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#collapseTarget"
-            aria-expanded="true"
-            aria-controls="collapseTarget"
+            [attr.data-bs-target]="'#collapseTarget-'+i"
+            aria-expanded="false"
+            [attr.aria-controls]="'collapseTarget-'+i"
           >
             Examples:
           </button>
         </p>
         <div
-          id="collapseTarget"
-          class="accordion-collapse collapse show"
+          [id]="'collapseTarget-'+i"
+          class="accordion-collapse collapse hide"
           aria-labelledby="examples"
           data-bs-parent="#examples-container"
         >
