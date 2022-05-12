@@ -1,6 +1,6 @@
 [
-  { "name": "java8", "active": false },
-  { "name": "collection", "active": false },
-  { "name": "junit", "active": false },
-  { "name": "TimeComplexity", "active": false }
+  { "name": "Java 8", "file": "java8.json", "active": false },
+  { "name": "Collections", "file": "collection.json", "active": false },
+  { "name": "Junit", "file": "junit.json", "active": false },
+  { "name": "Time-N-Complexity", "file": "TimeComplexity.json", "active": false }
 ]
