@@ -1,19 +1,21 @@
 <div class="container mt-5">
   <div class="row">
-<!--    <div class="col-1"></div>-->
-    <div class="col-2 pe-0 vh-90 concept-container scrollbar left-scroll">
+    <div class="col-2 vh-90 concept-container scrollbar left-scroll">
       <ul class="p-0 text-start my-0">
         <li
           (click)="dataLoader.loadOverview(concept)"
           *ngFor="let concept of dataLoader.concepts"
           [ngClass]="{ active : concept.active }"
+          [@changeState]="concept.currentState"
+          (@changeState.done)="endState(concept)"
+          (click)="changeState(concept)"
         >
-          {{ concept.name }}
+          <span>{{ concept.name }}</span>
         </li>
 
       </ul>
     </div>
-    <div class="col-10 vh-90 overview-container scrollbar">
+    <div class="col-9 vh-90 overview-container scrollbar">
       <app-overview></app-overview>
     </div>
 <!--    <div class="col-1"></div>-->

@@ -41,7 +41,7 @@ export class DataLoader {
   }
 
   static getDefaultConcept(): Concept {
-    return { file:'', name: '', active: false };
+    return { file:'', name: '', active: false, currentState:'' };
   }
 
   static getDefaultOverview(): Overview {

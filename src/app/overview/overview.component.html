@@ -36,10 +36,12 @@
               <div class="accordion-body">
                 <div #container *ngFor="let example of feature.examples">
                   <p class="feature-syntax">
-                    {{ example }}
+                    {{ example.text }}
                     <i
-                      (click)="showSuccess()"
-                      [cbContent]="example"
+                      [@changeState]="example.currentState"
+                      (@changeState.done)="endState(example)"
+                      (click)="showSuccess(example)"
+                      [cbContent]="example.text"
                       [container]="container"
                       class="bi bi-clipboard-plus float-end text-success font-weight-bold fs-5"
                       ngxClipboard
