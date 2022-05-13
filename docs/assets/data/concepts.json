@@ -1,6 +1,26 @@
 [
-  { "name": "Java 8", "file": "java8.json", "active": false },
-  { "name": "Collections", "file": "collection.json", "active": false },
-  { "name": "Junit", "file": "junit.json", "active": false },
-  { "name": "Time-N-Complexity", "file": "TimeComplexity.json", "active": false }
+  {
+    "name": "Java 8",
+    "currentState": "small",
+    "file": "java8.json",
+    "active": false
+  },
+  {
+    "name": "Collections",
+    "currentState": "small",
+    "file": "collection.json",
+    "active": false
+  },
+  {
+    "name": "Junit",
+    "currentState": "small",
+    "file": "junit.json",
+    "active": false
+  },
+  {
+    "name": "Time-N-Complexity",
+    "currentState": "small",
+    "file": "TimeComplexity.json",
+    "active": false
+  }
 ]
