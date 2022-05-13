@@ -2,13 +2,14 @@
   margin: 12px 0px 0px 0px;
 }
 ul {
-  background: #d5dce4;
+  background: #fff;
 }
 ul li {
   list-style: none;
   padding: 5px;
   border: 1px solid;
   border-right: none;
+
 }
 ul li:first-child {
   border-bottom: none;
@@ -18,19 +19,16 @@ ul li:last-child {
 }
 
 ul li.active {
-  background: #b6bfcb;
+  color: #297fff;
+  background-color: #e7f1ff;
   font-weight: bold;
-  margin-right: -1px;
+  border-right: 2px solid #297fff;
+  font-style: italic;
 }
-.col-9 {
+.overview-container {
   border: 1px solid;
-  margin-left: -0.5px;
-  width: 70%;
-  border-left: none;
-  overflow: auto;
 }
-.col-3 {
-  border-right: 1px solid;
+.overview-container, .concept-container {
   overflow: auto;
   overflow-x: hidden;
 }

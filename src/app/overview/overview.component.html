@@ -1,12 +1,17 @@
+<h1>{{ dataLoader.overview.title }}</h1>
 <div class="accordion" id="accordionExample">
   <div *ngFor="let feature of dataLoader.overview.features;let i=index;" class="accordion-item">
     <h2 [id]="'headingOne-'+i" class="accordion-header">
-      <button [attr.aria-controls]="'collapseOne-'+i" [attr.data-bs-target]="'#collapseOne-'+i" aria-expanded="true" class="accordion-button"
+      <button [attr.aria-controls]="'collapseOne-'+i" [attr.data-bs-target]="'#collapseOne-'+i"
+              [ngClass]="(i==0)? '' : 'collapsed' "
+              aria-expanded="true" class="accordion-button"
               data-bs-toggle="collapse" type="button">
         {{ feature.name }}
       </button>
     </h2>
-    <div [attr.aria-labelledby]="'headingOne-'+i" [id]="'collapseOne-'+i" class="accordion-collapse collapse "
+    <div [attr.aria-labelledby]="'headingOne-'+i" [id]="'collapseOne-'+i"
+         [ngClass]="(i==0)? 'accordion-collapse collapse show' : 'accordion-collapse collapse' "
+
          data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <span class="feature-definition">

@@ -1,19 +1,20 @@
-<div class="container-fluid">
+<div class="container mt-5">
   <div class="row">
-    <div class="mt-3 col-3 pe-0 vh-90">
+<!--    <div class="col-1"></div>-->
+    <div class="col-2 pe-0 vh-90 concept-container">
       <ul class="p-0">
         <li
-          class="active"
           (click)="dataLoader.loadOverview(concept)"
           *ngFor="let concept of dataLoader.concepts"
-          [ngClass]="{ active: concept.active }"
+          [ngClass]="{ active : concept.active }"
         >
           {{ concept.name }}
         </li>
       </ul>
     </div>
-    <div class="mt-3 col-9 vh-90">
+    <div class="col-10 vh-90 overview-container">
       <app-overview></app-overview>
     </div>
+<!--    <div class="col-1"></div>-->
   </div>
 </div>
