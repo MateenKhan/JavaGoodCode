@@ -2,7 +2,7 @@
   "title": "Collections",
   "features": [
     {
-      "name": "Lamda",
+      "name": "LinkedHashMap",
       "definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
       "syntax": "(argument-list) -> {body} ",
       "examples": [
