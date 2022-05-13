@@ -6,34 +6,34 @@ ul {
 }
 ul li {
   list-style: none;
-  padding: 5px;
-  border: 1px solid;
-  border-right: none;
+  padding: 10px;
+  padding-left: 1.5rem;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-top-right-radius: 15px;
+  border-right-style: dashed;
+  border-bottom-right-radius: 15px;
+  border-left: 1px solid;
+}
 
-}
-ul li:first-child {
-  border-bottom: none;
-}
 ul li:last-child {
-  border-top: none;
+  border-bottom: 1px solid;
 }
 
 ul li.active {
   color: #297fff;
   background-color: #e7f1ff;
   font-weight: bold;
-  border-right: 2px solid #297fff;
   font-style: italic;
-  padding-left: 1.5rem;
-}
-.overview-container {
-  border: 1px solid;
-}
-.overview-container, .concept-container {
-  overflow: auto;
-  overflow-x: hidden;
+  padding-left: 2.5rem;
+  border-right: 5px solid #297fff;
 }
 
 .vh-90 {
   height: 90vh;
+}
+
+.overview-container {
+  padding-left: 1.5rem;
+  background: #fff;
 }

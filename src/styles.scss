@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.scrollbar::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #3a5376;
+  background-color: #a6cbff;
+}
+.scrollbar
+{
+  overflow-y: auto;
+  padding-left: 0px;
+}
+
+.scrollbar.left-scroll {
+  direction: rtl;
+  border-left: 1px solid white;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
