@@ -24,6 +24,7 @@ ul li.active {
   font-weight: bold;
   border-right: 2px solid #297fff;
   font-style: italic;
+  padding-left: 1.5rem;
 }
 .overview-container {
   border: 1px solid;
