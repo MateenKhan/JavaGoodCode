@@ -1,3 +1,4 @@
+<a class="float-end" [routerLink]="['/editor',dataLoader.currentConcept.file]" routerLinkActive="active">Edit</a>
 <h1>{{ dataLoader.overview.title }}</h1>
 <div class="accordion" id="accordionExample">
   <div *ngFor="let feature of dataLoader.overview.features;let i=index;" class="accordion-item">

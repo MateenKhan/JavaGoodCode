@@ -3,6 +3,7 @@ import { DataLoader } from '../data-loader';
 import { ToastrService } from 'ngx-toastr';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import {Example} from "../models/Feature";
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
@@ -22,11 +23,19 @@ import {Example} from "../models/Feature";
 })
 export class OverviewComponent implements OnInit {
   show: boolean = false;
+
   constructor(
     public dataLoader: DataLoader,
-    private toastService: ToastrService
+    private toastService: ToastrService,
+    private route: ActivatedRoute,
+    private router: Router,
+
   ) {}
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.dataLoader.loadOverviewByConceptId(params['id']);
+    });
+  }
   toggle(): void {
     this.show = !this.show;
   }
@@ -38,4 +47,5 @@ export class OverviewComponent implements OnInit {
   endState(example:Example) {
     example.currentState = "small";
   }
+
 }

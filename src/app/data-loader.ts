@@ -40,8 +40,28 @@ export class DataLoader {
     });
   }
 
+  loadOverviewByConceptId(id:number) {
+    if(!id){
+      return;
+    }
+    let curtCncpt= this.currentConcept;
+    let file = "";
+    this.concepts.forEach(function (item) {
+      item.active = false;
+      if(id===item.id){
+        curtCncpt = item;
+        curtCncpt.active = true;
+        file = curtCncpt.file;
+      }
+    });
+    DataLoader.getOverview(file).subscribe((data: Overview) => {
+      console.log('overview', data);
+      this.overview = data;
+    });
+  }
+
   static getDefaultConcept(): Concept {
-    return { file:'', name: '', active: false, currentState:'' };
+    return { id: 0, file:'', name: '', active: false, currentState:'' };
   }
 
   static getDefaultOverview(): Overview {
@@ -53,6 +73,9 @@ export class DataLoader {
   }
 
   static getOverview(fileName: string): Observable<Overview> {
+    if(fileName==null || fileName.trim().length==0){
+      throw new DOMException("overview cannot be loaded with filename:"+fileName);
+    }
     const httpClient = InjectorInstance.get<HttpClient>(HttpClient);
     return httpClient.get<Overview>('assets/data/overview/' + fileName );
   }

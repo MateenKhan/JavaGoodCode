@@ -12,10 +12,11 @@ import { DataLoader } from './data-loader';
 import { ClipboardModule } from 'ngx-clipboard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { JsonEditorComponent } from './json-editor/json-editor.component';
 
 export let InjectorInstance: Injector;
 @NgModule({
-  declarations: [AppComponent, OverviewComponent],
+  declarations: [AppComponent, OverviewComponent, JsonEditorComponent],
   imports: [
     BrowserModule,
     FormsModule,

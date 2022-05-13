@@ -1,6 +1,6 @@
 import { Feature } from './Feature';
 
 export interface Overview {
-  title: string;
+  title: string ;
   features: Feature[];
 }

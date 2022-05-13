@@ -5,18 +5,20 @@
         <li
           (click)="dataLoader.loadOverview(concept)"
           *ngFor="let concept of dataLoader.concepts"
-          [ngClass]="{ active : concept.active }"
+          [ngClass]="{ 'active' : concept.active }"
           [@changeState]="concept.currentState"
           (@changeState.done)="endState(concept)"
           (click)="changeState(concept)"
+          [routerLink]="['/overview',concept.id]" routerLinkActive="active"
         >
+
           <span>{{ concept.name }}</span>
         </li>
 
       </ul>
     </div>
     <div class="col-9 vh-90 overview-container scrollbar">
-      <app-overview></app-overview>
+      <router-outlet></router-outlet>
     </div>
 <!--    <div class="col-1"></div>-->
   </div>
