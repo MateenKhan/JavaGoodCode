@@ -1,23 +1,27 @@
 [
   {
+    "id": 1,
     "name": "Java 8",
     "currentState": "small",
     "file": "java8.json",
     "active": false
   },
   {
+    "id": 2,
     "name": "Collections",
     "currentState": "small",
     "file": "collection.json",
     "active": false
   },
   {
+    "id": 3,
     "name": "Junit",
     "currentState": "small",
     "file": "junit.json",
     "active": false
   },
   {
+    "id": 4,
     "name": "Time-N-Complexity",
     "currentState": "small",
     "file": "TimeComplexity.json",
