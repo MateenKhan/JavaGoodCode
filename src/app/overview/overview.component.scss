@@ -1,10 +1,31 @@
-h1{
-  color: #74a0dc;
-  border: 1px solid;
+h1 {
+  color: #8829ba;
+  border: 2px solid;
   border-radius: 5px;
   padding: 1.25rem;
   text-align: center;
 }
+
 ul li {
   list-style: none;
+}
+
+.accordion-body {
+  background: #fff;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #b7d3fff5;
+}
+
+.accordion-button {
+  background-color: #e4f2ffe6;
+}
+
+.accordion-item {
+  border: 2px solid #fff;
+}
+
+.p-1 {
+  padding: 1rem !important;
 }

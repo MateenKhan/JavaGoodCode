@@ -1,32 +1,20 @@
-.container-fluid {
-  margin: 12px 0px 0px 0px;
-}
-ul {
-  background: #fff;
+ul li:hover {
+  background-color: #e7f1ff;
 }
 ul li {
   list-style: none;
-  padding: 10px;
-  padding-left: 1.5rem;
-  border-top: 1px solid;
-  border-right: 1px solid;
-  border-top-right-radius: 15px;
-  border-right-style: dashed;
-  border-bottom-right-radius: 15px;
-  border-left: 1px solid;
+  padding: 10px 10px 10px 10px;
 }
 
-ul li:last-child {
-  border-bottom: 1px solid;
-}
-
-ul li.active {
+ul li.active,ul li:hover {
   color: #297fff;
   background-color: #e7f1ff;
   font-weight: bold;
   font-style: italic;
   padding-left: 2.5rem;
+  border: 1px solid #fff;
   border-right: 5px solid #297fff;
+  transition: 0.4s;
 }
 
 .vh-90 {
@@ -35,5 +23,8 @@ ul li.active {
 
 .overview-container {
   padding-left: 1.5rem;
-  background: #fff;
+  background: #e2e7ec;
+}
+.concept-container {
+  background-color: #b7d3ff ;
 }

@@ -1,11 +1,11 @@
-<a class="float-end" [routerLink]="['/editor',dataLoader.currentConcept.file]" routerLinkActive="active">Edit</a>
+<a class="float-end p-1" [routerLink]="['/editor',dataLoader.currentConcept.file]" routerLinkActive="active">Edit</a>
 <h1>{{ dataLoader.overview.title }}</h1>
 <div class="accordion" id="accordionExample">
   <div *ngFor="let feature of dataLoader.overview.features;let i=index;" class="accordion-item">
     <h2 [id]="'headingOne-'+i" class="accordion-header">
       <button [attr.aria-controls]="'collapseOne-'+i" [attr.data-bs-target]="'#collapseOne-'+i"
               [ngClass]="(i==0)? '' : 'collapsed' "
-              aria-expanded="true" class="accordion-button"
+              aria-expanded="true" class="fw-bold accordion-button"
               data-bs-toggle="collapse" type="button">
         {{ feature.name }}
       </button>
@@ -44,7 +44,7 @@
                       (click)="showSuccess(example)"
                       [cbContent]="example.text"
                       [container]="container"
-                      class="bi bi-clipboard-plus float-end text-success font-weight-bold fs-5"
+                      class="bi bi-clipboard-plus float-end text-success fw-bold fs-5"
                       ngxClipboard
                     ></i>
                   </p>
