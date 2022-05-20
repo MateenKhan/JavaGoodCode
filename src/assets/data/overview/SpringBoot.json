@@ -1,0 +1,16 @@
+{
+	"title": "Spring Boot Annotations",
+	"features": [
+		{
+			"name": "@SpringBootApplication",
+			"definition": "combination of 3 annotations @Configuration, @ComponentScan,",
+			"syntax": "@SpringBootApplication",
+			"examples": [
+				{
+					"currentState": "small",
+					"text": "public class Main{ main(){.....}}"
+				}
+			]
+		}
+	]
+}
