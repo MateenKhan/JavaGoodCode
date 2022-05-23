@@ -1,5 +1,12 @@
 [
 	{
+		"id": 0,
+		"name": "Basics",
+		"currentState": "small",
+		"file": "basics.json",
+		"active": false
+	},
+	{
 		"id": 1,
 		"name": "Java 8",
 		"currentState": "small",
