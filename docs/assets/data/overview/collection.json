@@ -6,8 +6,14 @@
       "definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
       "syntax": "(argument-list) -> {body} ",
       "examples": [
-        {"currentState": "small","text":"() -> {  System.out.println(\"Linked Hash map \")  }  "},
-        {"currentState": "small","text":"(p1) -> {  System.out.println(\"Body of one parameter \")  }  "}
+        {
+          "currentState": "small",
+          "text": "() -> {  System.out.println(\"Linked Hash map \")  }  "
+        },
+        {
+          "currentState": "small",
+          "text": "(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
+        }
       ]
     }
   ]
