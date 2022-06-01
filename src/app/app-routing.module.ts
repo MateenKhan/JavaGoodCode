@@ -6,7 +6,7 @@ import {JsonEditorComponent} from "./json-editor/json-editor.component";
 const routes: Routes = [
   {path:"overview/:id",component:OverviewComponent},
   {path:"editor/:file",component:JsonEditorComponent},
-  { path: '',   redirectTo: '/overview/1', pathMatch: 'full' },
+  { path: '**',   redirectTo: '/overview/0', pathMatch: 'full' },
 ];
 
 @NgModule({

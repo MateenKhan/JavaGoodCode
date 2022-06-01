@@ -69,7 +69,7 @@ export class DataLoader {
   }
 
   ngOnInit() {
-    DataLoader.getOverview('basics.json');
+    // DataLoader.getOverview('basics.json');
   }
 
   static getOverview(fileName: string): Observable<Overview> {
