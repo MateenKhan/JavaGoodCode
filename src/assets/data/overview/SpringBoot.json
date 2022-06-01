@@ -14,7 +14,7 @@
 		},
 		{
 			"name": "@SpringBootApplication",
-			"definition": "combination of 3 annotations @Configuration, @ComponentScan,",
+			"definition": "combination of 3 annotations @Configuration, @ComponentScan, @EnableAutoConfiguration",
 			"syntax": "@SpringBootApplication",
 			"examples": [
 				{
