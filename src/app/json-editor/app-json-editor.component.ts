@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import { JsonEditorComponent, JsonEditorOptions } from 'ang-jsoneditor';
 import {Overview} from "../models/Overview";
@@ -20,16 +20,17 @@ export class AppJsonEditorComponent implements OnInit {
   constructor(private route: ActivatedRoute) {
     this.editorOptions = new JsonEditorOptions()
     this.editorOptions.modes = ['code', 'text', 'tree', 'view'];
-    // DataLoader.loadFile(this.fileName).subscribe((data: Overview) => {
-    //   console.log('file Data', data);
-    //   this.data = data;
-    // });
-    this.data = {"products":[{"name":"car","product":[{"name":"honda","model":[{"id":"civic","name":"civic"},{"id":"accord","name":"accord"},{"id":"crv","name":"crv"},{"id":"pilot","name":"pilot"},{"id":"odyssey","name":"odyssey"}]}]}]}
+
+    // this.data = {"products":[{"name":"car","product":[{"name":"honda","model":[{"id":"civic","name":"civic"},{"id":"accord","name":"accord"},{"id":"crv","name":"crv"},{"id":"pilot","name":"pilot"},{"id":"odyssey","name":"odyssey"}]}]}]}
   }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
     this.fileName = String(routeParams.get('file'));
+    DataLoader.getOverview(this.fileName).subscribe((data: Overview) => {
+      console.log('file Data', data);
+      this.data = data;
+    });
   }
 
 }
