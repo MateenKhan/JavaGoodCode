@@ -1,0 +1,54 @@
+{
+  "title": "Spring Boot Annotations",
+  "features": [
+    {
+      "name": "Custom Actuator",
+      "definition": "To create a custom actuator annotations we have to use @Endpoint,@ReadOperation,@WriteOperation,@DeleteOperation",
+      "syntax": "@Endpoint(id=\"custom-health\")",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "@Component@Endpoint(id=\"custom-health\")public class CustomHealthEndPoint {    @ReadOperation    public CustomHealth health() {        Map<String, Object> details = new LinkedHashMap<>();        details.put(\"CustomHealthStatus\", \"Everything looks good\");        CustomHealth health = new CustomHealth();        health.setHealthDetails(details);        return health;    }    @ReadOperation    public String customEndPointByName(@Selector String name) {        return \"custom-end-point\";    }    @WriteOperation    public void writeOperation(@Selector String name) {        //perform write operation    }    @DeleteOperation    public void deleteOperation(@Selector String name){        //delete operation    }}"
+        }
+      ]
+    },
+    {
+      "name": "@SpringBootApplication",
+      "definition": "combination of 3 annotations @Configuration, @ComponentScan, @EnableAutoConfiguration",
+      "syntax": "@SpringBootApplication",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "public class Main{ main(){.....}}"
+        }
+      ]
+    },
+    {
+      "name": "Features",
+      "definition": "AutoConfiguration, Logging, Externalized Configuration, Starter POMs",
+      "syntax": "Features",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "AutoConfiguration : keep the values in pom.xml and it configures automatically with default values like connecting to db"
+        },
+        {
+          "currentState": "small",
+          "text": "AutoConfiguration : keep the values in pom.xml and it configures automatically with default values like connecting to db"
+        },
+        {
+          "currentState": "small",
+          "text": "Logging : Spring Boot uses Common logging for all internal logging. Logging dependencies are managed by default. We should not change logging dependencies, if there is no required customization is needed."
+        },
+        {
+          "currentState": "small",
+          "text": "Externalized Configuration : Spring Boot allows us to externalize our configuration so that we can work with the same application in different environments. Application use YAML files to externalize configuration."
+        },
+        {
+          "currentState": "small",
+          "text": "Starter POMs: In order to build a simple Spring MVC-based REST application that supports Jackson and to run it an embedded container, you would at least need the following dependencies (spring-core.jar, spring-web.jar,spring-webmvc.jar,jackson-databind.jar,tomcat-embed-core.jar,tomcat-embed-el.jar,tomcat-embed-logging-juil.jar). By using Spring Boot Starter POMs or starter dependency feature, you can get all of these by just adding spring-boot-starter-web dependency in your pom.xml."
+        }
+      ]
+    }
+  ]
+}

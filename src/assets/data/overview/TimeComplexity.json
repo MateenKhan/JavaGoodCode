@@ -1,0 +1,72 @@
+{
+  "title": "TimeComplexity",
+  "features": [
+    {
+      "name": "TimeComplexity",
+      "definition": "tells the time taken by a logic to execute the complexity",
+      "syntax": "O(equation)",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "O(n)/*denotes that, time taken to execute the logic is n*/"
+        },
+        {
+          "currentState": "small",
+          "text": "O(n2)/*denotes that, time taken to execute the logic is n2*/"
+        }
+      ]
+    },
+    {
+      "name": "Sequential TimeComplexity",
+      "definition": "tells the time taken to execute a squential loop",
+      "syntax": "O(n)",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "do { i++;}while(i<=n);/*O(n)*/"
+        },
+        {
+          "currentState": "small",
+          "text": "int i=0;while(i<=n){ i++;}/*O(n)*/"
+        }
+      ]
+    },
+    {
+      "name": "Division or multiplication",
+      "definition": "tells the time taken to execute a while division or multiplication",
+      "syntax": "O(logn)",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "do { i = i/c;}while(i<=n);/*O(logn)*/"
+        },
+        {
+          "currentState": "small",
+          "text": "do { i = i*c;}while(i<=n);/*O(logn)*/"
+        }
+      ]
+    },
+    {
+      "name": "Nested Loop",
+      "definition": "tells the time taken to execute nested loop",
+      "syntax": "O(n2)",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "int i=0;while(i<=n){ int j=0;while(j<=i){ j++;}i++;}/*O(n)*/"
+        }
+      ]
+    },
+    {
+      "name": "Infinite loop",
+      "definition": "Infinite loop is execute infinite times, hence there is no time complexity for infinite loop",
+      "syntax": "O(m)+O(n)",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "int i=1;do{i++;}while(i<=m);int j=1;do{j++;}while(j<=n);  /*O(m)+O(n)*/"
+        }
+      ]
+    }
+  ]
+}
