@@ -79,4 +79,12 @@ export class DataLoader {
     const httpClient = InjectorInstance.get<HttpClient>(HttpClient);
     return httpClient.get<Overview>('assets/data/overview/' + fileName );
   }
+
+  static loadFile(fileName: string): Observable<Overview> {
+    if(fileName==null || fileName.trim().length==0){
+      throw new DOMException("file cannot be loaded with filename:"+fileName);
+    }
+    const httpClient = InjectorInstance.get<HttpClient>(HttpClient);
+    return httpClient.get<Overview>( fileName );
+  }
 }

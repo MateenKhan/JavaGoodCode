@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {OverviewComponent} from "./overview/overview.component";
-import {JsonEditorComponent} from "./json-editor/json-editor.component";
+import {AppJsonEditorComponent} from "./json-editor/app-json-editor.component";
 
 const routes: Routes = [
   {path:"overview/:id",component:OverviewComponent},
-  {path:"editor/:file",component:JsonEditorComponent},
+  {path:"editor/:file",component:AppJsonEditorComponent},
   { path: '**',   redirectTo: '/overview/0', pathMatch: 'full' },
 ];
 
