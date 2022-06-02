@@ -8,7 +8,7 @@
       "examples": [
         {
           "currentState": "small",
-          "text": "() -> {<br/>System.out.println(\"Body of no parameter \")  }  "
+          "text": "() -> {\tSystem.out.println(\"Body of no parameter \");\n\tSystem.out.println(\"Body of no parameter \");\n  }  "
         },
         {
           "currentState": "small",

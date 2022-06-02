@@ -16,8 +16,8 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
       state('big', style({
         transform: 'scale(1.5)'
       })),
-      transition('small=>big', animate('200ms')),
-      transition('big=>small', animate('200ms'))
+      transition('small=>big', animate('150ms')),
+      transition('big=>small', animate('150ms'))
     ])
   ],
 })

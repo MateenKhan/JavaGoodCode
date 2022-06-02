@@ -15,16 +15,16 @@
 
          data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <span class="feature-definition">
+        <span class="feature-definition" *ngIf="feature.definition">
           <span class="feature-name fw-bold">Definition:</span>
           {{ feature.definition }}
         </span>
-        <p class="feature-syntax">
+        <p class="feature-syntax" *ngIf="feature.syntax">
           <span class="fw-bold">Syntax : </span> {{ feature.syntax }}
         </p>
 
 
-        <div class="accordion" id="accordionExample1">
+        <div *ngIf="feature.examples" class="accordion" id="accordionExample1">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne1">
               <button aria-controls="collapseOne1" aria-expanded="true" class="accordion-button" data-bs-target="#collapseOne1"
@@ -35,19 +35,17 @@
             <div aria-labelledby="headingOne1" class="accordion-collapse collapse" data-bs-parent="#accordionExample1"
                  id="collapseOne1">
               <div class="accordion-body">
-                <div #container *ngFor="let example of feature.examples">
-                  <p class="feature-syntax">
-                    {{ example.text }}
-                    <i
-                      [@changeState]="example.currentState"
-                      (@changeState.done)="endState(example)"
-                      (click)="showSuccess(example)"
-                      [cbContent]="example.text"
-                      [container]="container"
-                      class="bi bi-clipboard-plus float-end text-success fw-bold fs-5"
-                      ngxClipboard
-                    ></i>
-                  </p>
+                <div #container class="row" *ngFor="let example of feature.examples">
+                  <pre [innerHtml] = "example.text" class="col-11 feature-syntax">
+                  </pre>
+                  <i
+                    [@changeState]="example.currentState"
+                    (@changeState.done)="endState(example)"
+                    (click)="showSuccess(example)"
+                    [cbContent]="example.text"
+                    [container]="container"
+                    class="col-1 bi bi-clipboard-plus text-success fw-bold fs-5"
+                    ngxClipboard></i>
                 </div>
               </div>
             </div>
