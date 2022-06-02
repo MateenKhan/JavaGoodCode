@@ -27,13 +27,17 @@ export class OverviewComponent implements OnInit {
   constructor(
     public dataLoader: DataLoader,
     private toastService: ToastrService,
-    private route: ActivatedRoute,
-    private router: Router,
-
+    private route: ActivatedRoute
   ) {}
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.dataLoader.loadOverviewByConceptId(params['id']);
+      let id = params['id'];
+      let file = params['file'];
+      if(id) {
+        this.dataLoader.loadOverviewByConceptId(id);
+      } else if(file){
+        alert(file);
+      }
     });
   }
   toggle(): void {
@@ -48,4 +52,7 @@ export class OverviewComponent implements OnInit {
     example.currentState = "small";
   }
 
+  navigateToDetail(file:string){
+    alert(file);
+  }
 }

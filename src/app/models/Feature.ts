@@ -3,6 +3,7 @@ export interface Feature {
   definition: string;
   syntax: string;
   examples: Example[];
+  file:string;
 }
 export interface Example {
   text: string;

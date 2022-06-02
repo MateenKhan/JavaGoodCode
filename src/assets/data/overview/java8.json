@@ -14,7 +14,8 @@
           "currentState": "small",
           "text": "(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
         }
-      ]
+      ],
+      "file": "lambda.json"
     },
     {
       "name": "Method references",

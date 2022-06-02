@@ -15,6 +15,7 @@
 
          data-bs-parent="#accordionExample">
       <div class="accordion-body">
+        <p><a class="float-end" (click)="navigateToDetail(feature.file)">Details</a></p>
         <span class="feature-definition" *ngIf="feature.definition">
           <span class="feature-name fw-bold">Definition:</span>
           {{ feature.definition }}

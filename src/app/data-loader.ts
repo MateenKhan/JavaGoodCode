@@ -44,16 +44,22 @@ export class DataLoader {
     if(!id){
       return;
     }
-    let curtCncpt= this.currentConcept;
-    let file = "";
+
+    this.activeCurrentConcept(this.currentConcept,id);
+    this.loadOverviewFromFile(this.currentConcept.file);
+  }
+  activeCurrentConcept(curtCncpt: Concept, id:number){
     this.concepts.forEach(function (item) {
       item.active = false;
       if(id===item.id){
         curtCncpt = item;
         curtCncpt.active = true;
-        file = curtCncpt.file;
       }
     });
+  }
+
+
+  loadOverviewFromFile(file:string){
     DataLoader.getOverview(file).subscribe((data: Overview) => {
       console.log('overview', data);
       this.overview = data;
