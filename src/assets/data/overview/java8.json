@@ -2,7 +2,7 @@
   "title": "Java 8",
   "features": [
     {
-      "name": "Lamda",
+      "name": "Lambda",
       "definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
       "syntax": "(argument-list) -> {body} ",
       "examples": [
