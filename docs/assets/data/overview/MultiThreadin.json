@@ -1,0 +1,16 @@
+{
+  "title": "Multi Thead",
+  "features": [
+    {
+      "name": "Thread communication",
+      "definition": "wait(), notify(), notifyAll() join()",
+      "syntax": "(argument-list) -> {body} ",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": "wait(), notify(), notifyAll() join()"
+        }
+      ]
+    }
+  ]
+}
