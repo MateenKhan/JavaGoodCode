@@ -33,6 +33,13 @@
     "currentState": "small",
     "file": "SpringBoot.json",
     "active": false
+  },
+  {
+    "id": 6,
+    "name": "Multi Threading",
+    "currentState": "small",
+    "file": "MultiThreading.json",
+    "active": false
   }
 ]
 
