@@ -15,6 +15,16 @@
           "text": "(p1) -> {  System.out.println(\"Body of one parameter \")  }  "
         }
       ]
+    }, {
+      "name": "Fail fast fail safe",
+      "definition": "A clear and concise way to implement SAM interface(Single Abstract Method) by using an expression",
+      "syntax": "(argument-list) -> {body} ",
+      "examples": [
+        {
+          "currentState": "small",
+          "text": " Fail Safe does not throw any ConcurrentModificationException in modifying the object during the iteration process"
+        }
+      ]
     }
   ]
 }
